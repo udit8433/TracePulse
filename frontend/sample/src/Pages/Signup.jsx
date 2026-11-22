@@ -27,11 +27,7 @@ const Signup = () => {
       console.log("Status:", response.status);
       console.log("Response:", data);
 
-      if (!response.ok) {
-        alert(data.message || "Signup failed");
-        return;
-      }
-
+      
       alert("Account created successfully!");
 
       // Clear form
