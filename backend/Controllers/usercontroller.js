@@ -27,7 +27,7 @@ export const signup=async(req,res)=>{
     const user=await User.findOne({email});
 
     if(user){
-        res.status(409).json({
+       return  res.status(409).json({
             message:"Email Id already exist",
         })
     }
