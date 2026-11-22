@@ -19,6 +19,7 @@ const Signup = () => {
 
     try {
      const response = await api.post("/user/signup", {
+       name,
     email,
     password
 });
