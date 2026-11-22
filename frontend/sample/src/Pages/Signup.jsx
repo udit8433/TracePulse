@@ -10,6 +10,8 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+   const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -31,14 +33,14 @@ const Signup = () => {
       console.log("Response:", data);
 
       
-      alert("Account created successfully!");
+      alert("Account created successfully! Now Please login");
 
       // Clear form
       setName("");
       setEmail("");
       setPassword("");
       setConfirmPassword("");
-      const navigate = useNavigate();
+     
        navigate("/login");
 
     } catch (error) {
