@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./Signup.css";
 import api from "../api.js";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -36,6 +38,7 @@ const Signup = () => {
       setEmail("");
       setPassword("");
       setConfirmPassword("");
+      const navigate = useNavigate();
        navigate("/login");
 
     } catch (error) {
