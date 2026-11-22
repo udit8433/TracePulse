@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.signup-page {
+  min-height: 100vh;
+  background: #080b14;
+    min-height: 100dvh;
+    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px 20px;
+
+  position: relative;
+  overflow: hidden;
+
+  color: white;
+}
+
+/* Background */
+
+.signup-background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.35;
+}
+
+.glow-1 {
+  width: 450px;
+  height: 450px;
+  background: #6c4cff;
+
+  top: -180px;
+  left: -150px;
+}
+
+.glow-2 {
+  width: 500px;
+  height: 500px;
+  background: #00c6ff;
+
+  right: -200px;
+  bottom: -200px;
+}
+
+/* Card */
+
+.signup-card {
+  width: min(100%, 450px);
+    padding: clamp(22px, 5vw, 40px);
+
+  position: relative;
+  z-index: 2;
+
+  background: rgba(17, 21, 35, 0.8);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 24px;
+
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Header */
+
+.signup-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.logo {
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+
+  border-radius: 17px;
+
+  background: linear-gradient(
+    135deg,
+    #7657ff,
+    #4c8dff
+  );
+
+  box-shadow:
+    0 10px 30px rgba(101, 79, 255, 0.35);
+}
+
+.signup-header h1 {
+  font-size: 29px;
+  font-weight: 700;
+
+  letter-spacing: -0.7px;
+
+  margin-bottom: 7px;
+}
+
+.signup-header p {
+  color: #8d94a8;
+  font-size: 14px;
+}
+
+/* Inputs */
+
+.input-group {
+  margin-bottom: 17px;
+}
+
+.input-group label {
+  display: block;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #d9dce5;
+
+  margin-bottom: 8px;
+}
+
+.input-wrapper {
+  height: 50px;
+ width: 100%;
+    min-width: 0;
+
+  position: relative;
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 100%;
+    min-width: 0;
+  padding: 0 18px 0 47px;
+
+  background: rgba(255, 255, 255, 0.045);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 12px;
+
+  color: white;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.25s ease;
+}
+
+.input-wrapper input::placeholder {
+  color: #5f6679;
+}
+
+.input-wrapper input:focus {
+  border-color: #7258ff;
+
+  background: rgba(114, 88, 255, 0.06);
+
+  box-shadow:
+    0 0 0 4px rgba(114, 88, 255, 0.1);
+}
+
+.input-icon {
+  position: absolute;
+
+  left: 16px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #777f94;
+
+  font-size: 14px;
+
+  z-index: 1;
+}
+
+/* Button */
+
+.signup-button {
+  width: 100%;
+  height: 52px;
+
+  margin-top: 7px;
+
+  border: none;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7558ff,
+      #536dff
+    );
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  transition: 0.25s ease;
+
+  box-shadow:
+    0 12px 25px rgba(95, 80, 255, 0.25);
+}
+
+.signup-button span {
+  font-size: 19px;
+
+  transition: transform 0.2s ease;
+}
+
+.signup-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 16px 30px rgba(95, 80, 255, 0.35);
+}
+
+.signup-button:hover span {
+  transform: translateX(4px);
+}
+
+.signup-button:active {
+  transform: translateY(0);
+}
+
+/* Login link */
+
+.login-text {
+  text-align: center;
+
+  margin-top: 25px;
+
+  color: #747c90;
+
+  font-size: 13px;
+}
+
+.login-text a {
+  color: #947fff;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  color: #b0a1ff;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .signup-page {
+    padding: 20px 15px;
+  }
+
+  .signup-card {
+    padding: 30px 23px;
+
+    border-radius: 20px;
+  }
+
+  .signup-header h1 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 350px) {
+    .signup-card {
+        padding: 20px 16px;
+    }
+
+    .signup-header h1 {
+        font-size: 23px;
+    }
+
+    .login-text {
+        font-size: 11px;
+    }
+}
